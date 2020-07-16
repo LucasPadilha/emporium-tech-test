@@ -30,6 +30,8 @@ class Base
      * Get the payment date for the current month
      * 
      * @param string $format Format to return the date
+     * 
+     * @return string
      */
     public function getPaymentDate(string $format = 'd/m/Y'): string
     {

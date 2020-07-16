@@ -35,6 +35,7 @@ class Csv
      * 
      * @param string $suffix The suffix which will be used on the file name
      * @param array $data The data to populate the file
+     * 
      * @return void
      */
     public function __construct(string $suffix, array $data)
@@ -45,6 +46,8 @@ class Csv
 
     /**
      * Method to handle the outputting task
+     * 
+     * @throws Exception if the file couldn't be opened
      * 
      * @return string The generated file path
      */

@@ -16,16 +16,16 @@ use Exception;
 class Calculator
 {
     /**
-     * @var array
-     * 
      * An array populated with all payment dates, used for outputting
+     * 
+     * @var array
      */
     private $output_data = [];
 
     /**
-     * @var Carbon
-     * 
      * The starting date which will be used to calculate the next 12 months
+     * 
+     * @var Carbon
      */
     private $starting_date;
 
@@ -33,6 +33,9 @@ class Calculator
      * Class contructor, used for setting the starting date
      * 
      * @param string $starting_date String compatible with strtotime to set the starting date
+     * 
+     * @throws Exception if date format is not supported
+     * 
      * @return void
      */
     public function __construct($starting_date = 'now')
@@ -75,6 +78,10 @@ class Calculator
      * Output the payment data to a file
      * 
      * @param string $type The file type used to output the data
+     * 
+     * @throws Exception if type is not supported
+     * 
+     * @return string
      */
     public function output(string $type): string
     {
