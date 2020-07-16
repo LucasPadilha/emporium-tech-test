@@ -13,7 +13,6 @@ Design, develop and document an application to calculate salary and salary bonus
 ### Requirements
 
 The application must be CLI based and output a csv file.
-
 The CSV file should contain the **payment dates for the next 12 months**. The CSV should contain a column for the **month name**, a column that contains the **base payment date for that month**, and a column that contains the **bonus payment date**.
 
 ---
@@ -50,4 +49,3 @@ After bringing up the container:
 
 - Open your terminal;
 - type `php artisan test`.
-
