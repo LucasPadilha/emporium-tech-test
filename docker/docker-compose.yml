@@ -1,0 +1,17 @@
+version: "3"
+services:
+  emporium_tech_test:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: emporium_tech_test
+    ports:
+      - 80:80
+    volumes:
+      - ../src/:/var/www/html/
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10M"
+        max-file: "10"
